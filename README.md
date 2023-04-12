@@ -8,3 +8,4 @@ Tecnologias:
 
 - Nodemon
 - Mongoose
+- bcrypt
