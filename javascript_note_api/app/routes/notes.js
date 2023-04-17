@@ -17,6 +17,7 @@ router.post('/', withAuth, async function(req, res) {
  
  });
 
+ //baixa uma nota
  router.get('/:id', withAuth , async(req,res)=>{
   try {
       const {id} = req.params
@@ -31,6 +32,18 @@ router.post('/', withAuth, async function(req, res) {
       res.status(500).json({error: 'Problem to get a note'})
   }
 })
+
+//baixa todas as notas
+router.get('/', withAuth, async function(req, res) {
+    try {
+      let notes = await Note.find({author: req.user._id })
+      res.send(notes)
+    } catch (error) {
+        res.status(500).json({error: 'Problem to get all notes'})
+    }
+});
+
+
 
  //metodo para verificar se usuario é o dono da nota
  const isOwner = (user, note)=>{
