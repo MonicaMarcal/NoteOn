@@ -26,6 +26,13 @@
 
 - [ViteJS](https://vitejs.dev/)
 - [ReactJS](https://reactjs.org/)
+- [react-router-dom](https://reactrouter.com/en/main)
+- [axios](https://axios-http.com/docs/intro)
+- [scss](https://sass-lang.com/)
+- [bulma](https://bulma.io/)
+- [rbx](https://dfee.github.io/rbx/)
+- [moment](https://momentjs.com/)
+- [fontawesome](https://fontawesome.com/)
 - [postman](https://www.postman.com/)
 - [vscode](https://code.visualstudio.com/)
-- [rbx](https://dfee.github.io/rbx/)
+
