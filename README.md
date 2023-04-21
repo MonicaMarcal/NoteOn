@@ -30,7 +30,7 @@
 - [axios](https://axios-http.com/docs/intro)
 - [scss](https://sass-lang.com/)
 - [bulma](https://bulma.io/)
-- [rbx](https://dfee.github.io/rbx/)
+- [react-bulma-companion](http://react-bulma-companion.surge.sh/?path=/docs/elements-block--default-story)
 - [moment](https://momentjs.com/)
 - [fontawesome](https://fontawesome.com/)
 - [postman](https://www.postman.com/)
