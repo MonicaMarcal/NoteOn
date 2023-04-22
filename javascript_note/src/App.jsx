@@ -1,14 +1,11 @@
+import {Fragment } from 'react';
 import "./App.scss";
-import { Notification, Section } from 'react-bulma-companion';
+import Header from "./components/Header";
 
 const App = () => (
-    <div>
-      <Section>
-        <Notification color="success">
-          Javascript Notes!
-        </Notification>
-      </Section>
-    </div>
+    <Fragment>
+      <Header/>
+    </Fragment>
  )
 
 export default App;

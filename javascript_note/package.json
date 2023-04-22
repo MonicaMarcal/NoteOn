@@ -17,9 +17,8 @@
     "bulma": "^0.9.4",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
-    "rbx": "^2.2.0",
     "react": "^18.2.0",
-    "react-bulma-companion": "^0.5.2",
+    "react-bulma-components": "^4.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
   },
