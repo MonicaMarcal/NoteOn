@@ -25,7 +25,14 @@ function Header(){
   
      <Navbar.Menu id="navbar-menu">
      <div className="navbar-item navbar-end">
-            Item 1
+            <div>
+              <div className="button is-white has-text-custom-purple">
+                <Link to="/register">Register</Link>
+              </div>
+              <div className="button is-outlined is-custom-purple">
+                <Link to="/login">Login</Link>
+              </div>
+            </div>
      </div>
      </Navbar.Menu>
     </Container>
