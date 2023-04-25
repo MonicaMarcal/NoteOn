@@ -2,13 +2,16 @@ import 'bulma/css/bulma.min.css';//node_modules
 import { Navbar, Container } from 'react-bulma-components';
 import LogoImage from '../../assets/images/logo.png';
 import '../../styles/header.scss'
+import { Link } from 'react-router-dom'; 
 
 function Header(){
   return(
     <Navbar>
     <Container>
       <Navbar.Brand>
-        <img src={LogoImage} />
+          <Link to="/">
+              <img src={LogoImage} />
+          </Link>
       <Navbar.Burger
         className="navbar-burger burger"
         aria-label="menu"
@@ -22,7 +25,14 @@ function Header(){
   
      <Navbar.Menu id="navbar-menu">
      <div className="navbar-item navbar-end">
-            Item 1
+            <div>
+              <div className="button is-white has-text-custom-purple">
+                <Link to="/register">Register</Link>
+              </div>
+              <div className="button is-outlined is-custom-purple">
+                <Link to="/login">Login</Link>
+              </div>
+            </div>
      </div>
      </Navbar.Menu>
     </Container>
