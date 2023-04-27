@@ -1,20 +1,35 @@
 import { Fragment, useState } from "react";
 import { Button,Section, Help} from "react-bulma-components";
 import { Navigate } from "react-router-dom";
+import UserService from '../../../services/users';
+
 
 function RegisterForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirectToLogin, setRedirectToLogin] = useState(false);
-  const [error] = useState(false);
+  const [error, setError] = useState(false);
+
+  //metodo para a submisão do formulario
+  const HandleSubmit = async (evt) => {
+     evt.preventDefault();
+     try {
+      // eslint-disable-next-line no-unused-vars
+      const user = await UserService.register({name: name,email: email,password: password});
+      setRedirectToLogin(true);
+      } catch (error) {
+      setError(true)
+      }
+     }
  
   if(redirectToLogin == true)
     return <Navigate to={{pathname: "/login"}}/>
+
   return (
     <Fragment>
      <Section size="small" className="home">
-        <form>
+        <form onSubmit={HandleSubmit}>
           <div size={12}>
             <div className="field">
               <label className="label">Name</label>
