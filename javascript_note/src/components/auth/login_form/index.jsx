@@ -2,14 +2,27 @@
 import { Fragment, useState} from 'react';
 import { Button,Help} from "react-bulma-components";
 import { Navigate } from "react-router-dom";
+import UserService from '../../../services/users';
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirectToRegister, setRedirectToRegister] = useState(false);
-  const [redirectToNotes] = useState(false);
-  const [error] = useState(false);
+  const [redirectToNotes, setRedirectToNotes] = useState(false);
+  const [error, setError] = useState(false);
 
+  const HandleSubmit = async (evt) => {
+      evt.preventDefault();
+   
+      try {
+      await UserService.login({email: email,password: password});
+        setRedirectToNotes(true);
+        } catch (error) {
+        setError(true)
+        }
+     }
+
+     
 
   if(redirectToRegister == true)
       return <Navigate to={{pathname: "/register"}}/>
@@ -19,7 +32,7 @@ function LoginForm() {
   return (
    <Fragment>
      <div className="has-text-centered">
-      <form>
+      <form onSubmit={HandleSubmit}>
        <div size={12}>
        <div className="field">
          <label size="small">Email:</label>
