@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
+import HeaderLogged from "../../../components/header_logged";
 
 const NotesScreen = () => (
  <Fragment>
-   Hello World index notes
+   <HeaderLogged/>
+   Hello world
  </Fragment>
 );
 
