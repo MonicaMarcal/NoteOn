@@ -6,6 +6,10 @@ import LoginScreen from './screens/auth/login'
 import NotesIndexScreen from './screens/notes/index'
 import UserEditScreen from './screens/users/edit'
 
+import PrivateRoute from './components/private_route';
+
+
+
 const RoutesUrl = () => {
   return (
     <Router>
@@ -13,10 +17,14 @@ const RoutesUrl = () => {
       <Route path="/" element={ <HomeScreen />} />
       <Route path="/register" element={ <RegisterScreen />} />
       <Route path="/login" element={ <LoginScreen />} />
-      <Route path="/notes" element={ <NotesIndexScreen />} />
-      <Route path="/users/edit" element={ <UserEditScreen />} />
+      <Route element={<PrivateRoute />}>
+        <Route exact path="/notes" element={ <NotesIndexScreen/> } />
+        <Route exact path="/users/edit" element={ <UserEditScreen/> } />
+      </Route>
       </Routes>
     </Router>
   );
 };
+
+
 export default RoutesUrl;
