@@ -27,6 +27,7 @@ function HeaderLogged() {
     <Link to="/notes">
        <img src={LogoImage} />
       </Link>
+      
       <a
          className="navbar-burger burger"
          aria-label="menu"
