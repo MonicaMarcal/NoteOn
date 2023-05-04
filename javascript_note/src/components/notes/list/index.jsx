@@ -2,6 +2,8 @@
 import { Fragment } from 'react';
 import { Tag, Heading, Button } from "react-bulma-components";
 import Moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 function ListNotes(props) {
@@ -38,6 +40,15 @@ function ListNotes(props) {
           {Moment(item.created_at).format('DD/MM')}
         </Tag>
        </div >
+
+        <div size={2}>
+          <FontAwesomeIcon
+            icon={faTrash}
+            onClick={() => props.deleteNote(item)}
+            color="grey"
+          />
+        </div>
+        
       </div >
      </li>
     )}

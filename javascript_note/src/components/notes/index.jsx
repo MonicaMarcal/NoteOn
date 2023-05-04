@@ -14,6 +14,8 @@ function Notes(props) {
       if (response.data.length >= 1) {
         setNotes(response.data.reverse())
         setCurrentNote(response.data[0])
+      }else{
+        setNotes([])
       }
      }
 
@@ -21,6 +23,11 @@ function Notes(props) {
      const createNote = async (params) => {
       // eslint-disable-next-line no-unused-vars
       const note = await NoteService.create();
+      fetchNotes();
+     }
+
+     const deleteNote = async (note) => {
+      await NoteService.delete(note._id);
       fetchNotes();
      }
 
@@ -58,6 +65,7 @@ function Notes(props) {
       <List
         notes={notes}
         selectNote={selectNote}
+        deleteNote={deleteNote}
         createNote={createNote}
         current_note={current_note}
       />
