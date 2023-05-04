@@ -5,11 +5,11 @@ import LogoImage from '../../assets/images/logo.png';
 import "../../styles/header.scss";
 import UserService from '../../services/users';
 import { Navigate, Link } from "react-router-dom";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faList } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faList } from '@fortawesome/free-solid-svg-icons'
 
 
-function HeaderLogged() {
+function HeaderLogged(props) {
  const [redirectToHome, setRedirectToHome] = useState(false);
 
  const logOut = async () => {
@@ -41,6 +41,21 @@ function HeaderLogged() {
   </div>
 
       <div className="navbar-end">
+
+     {/*botão sidebar*/}
+      <nav className="navbar-item navbar-start">
+        <a className="navbar-item">
+          <Button
+          className="open-button"
+          color="black"
+          outlined
+          // eslint-disable-next-line react/prop-types
+          onClick={() => props.setIsOpen(true)}>
+            <FontAwesomeIcon icon={faList} />
+          </Button>
+        </a>
+      </nav>
+
       <div className="navbar-item">
       <div className="navbar-item has-dropdown is-hoverable">
         <Button className="button" color="black" outlined>
