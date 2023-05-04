@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Fragment } from 'react';
-import { Tag, Heading } from "react-bulma-components";
+import { Tag, Heading, Button } from "react-bulma-components";
 import Moment from 'moment';
 
 
@@ -12,6 +12,13 @@ function ListNotes(props) {
      <Heading size={6}>
        {props.notes.length} Notes
      </Heading>
+
+      <div size={2}>
+        <Button state="active" color="custom-purple" outlined size="small" onClick={() => props.createNote()}>
+          Notes +
+        </Button>
+      </div>
+
     </div >
    </div >
    <ul className="notes-list">

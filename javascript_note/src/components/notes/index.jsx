@@ -17,6 +17,13 @@ function Notes(props) {
       }
      }
 
+     // eslint-disable-next-line no-unused-vars
+     const createNote = async (params) => {
+      // eslint-disable-next-line no-unused-vars
+      const note = await NoteService.create();
+      fetchNotes();
+     }
+
      const selectNote = (id) => {
        const note = notes.find((note) => {
         return note._id == id;
@@ -47,11 +54,14 @@ function Notes(props) {
         Search...
       </div>
      </div>
+     
       <List
         notes={notes}
         selectNote={selectNote}
+        createNote={createNote}
         current_note={current_note}
       />
+
     </Menu>
 
 
