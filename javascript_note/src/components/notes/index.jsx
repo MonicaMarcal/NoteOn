@@ -58,7 +58,7 @@ function Notes(props) {
      customCrossIcon={false}
     >
      <div>
-      <div className="columns">
+      <div>
         Search...
       </div>
      </div>
