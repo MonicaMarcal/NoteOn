@@ -9,39 +9,39 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 function ListNotes(props) {
  return (
   <Fragment>
-   <div>
-    <div  size={6} offset={1}>
-     <Heading size={6}>
+   <div className=" column is-mobile">
+    <div className="column is-three-fifths" offset={1}>
+     <Heading className='title is-6'>
        {props.notes.length} Notes
      </Heading>
 
-      <div size={2}>
+      <div>
         <Button state="active" color="custom-purple" outlined size="small" onClick={() => props.createNote()}>
           Notes +
         </Button>
       </div>
+      </div>
+      </div>
 
-    </div >
-   </div >
    <ul className="notes-list">
      {props.notes.map((item, key) =>
      // eslint-disable-next-line react/no-unknown-property
-     <li key={key} onClick={() => props.selectNote(item._id)} active={item == props.current_note}>
-      <Heading size={6}>
+     <li className='column is-two-thirds ' key={key} onClick={() => props.selectNote(item._id)} active={item == props.current_note}>
+      <Heading className='title is-6'>
         {item.title.replace(/(<([^>]+)>)/ig, "").substring(0,15)}
       </Heading>
-      <Heading size={6} subtitle spaced={false}>
+      <Heading className='title is-6' subtitle spaced={false}>
         {item.body.replace(/(<([^>]+)>)/ig, "").substring(0,30)}
       </Heading>
 
-      <div>
-       <div  size={10}>
+      <div className="columns is-mobile">
+       <div className="column is-three-quarters">
         <Tag color="dark">
           {Moment(item.created_at).format('DD/MM')}
         </Tag>
        </div >
 
-        <div size={2}>
+        <div>
           <FontAwesomeIcon
             icon={faTrash}
             onClick={() => props.deleteNote(item)}
@@ -49,7 +49,7 @@ function ListNotes(props) {
           />
         </div>
         
-      </div >
+      </div>
      </li>
     )}
    </ul>

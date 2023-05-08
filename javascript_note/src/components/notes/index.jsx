@@ -3,6 +3,8 @@ import '../../styles/notes.scss'
 import { push as Menu } from 'react-burger-menu'
 import List from "../notes/list";
 import NoteService from '../../services/note';
+import Editor from "../notes/editor";
+import Search from '../notes/search';
 
 function Notes(props) {
   const [notes, setNotes] = useState([]);
@@ -31,6 +33,20 @@ function Notes(props) {
       fetchNotes();
      }
 
+     const updateNote = async (oldNote, params) => {
+      const updatedNote = await NoteService.update(oldNote._id, params);
+      const index = notes.indexOf(oldNote);
+      const newNotes = notes;
+      newNotes[index] = updatedNote.data;
+      setNotes(newNotes);
+      setCurrentNote(updatedNote.data);
+     }
+
+     const searchNotes = async (query) => {
+      const response = await NoteService.search(query);
+        setNotes(response.data)
+     }
+
      const selectNote = (id) => {
        const note = notes.find((note) => {
         return note._id == id;
@@ -57,8 +73,8 @@ function Notes(props) {
      customCrossIcon={false}
     >
      <div>
-      <div className="columns">
-        Search...
+      <div>
+        <Search searchNotes={searchNotes} fetchNotes={fetchNotes} />
       </div>
      </div>
      
@@ -74,7 +90,10 @@ function Notes(props) {
 
 
     <div size={12} className="notes-editor" id="notes-editor">
-      Editor...
+    <Editor 
+      note={current_note}
+      updateNote={updateNote}
+    />
     </div>
    </div>
   </Fragment>
