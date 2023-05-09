@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Section, Heading, Container, Card } from "react-bulma-components";
 import "../../../styles/users.scss";
 import HeaderLogged from "../../../components/header_logged";
+import UsersEditForm from "../../../components/users/user_edit_form";
 
 
 const UserEditScreen = () => (
@@ -16,7 +17,7 @@ const UserEditScreen = () => (
       </Heading>
       <Card>
        <Card.Content>
-         Users Edit Form...
+          <UsersEditForm/>
        </Card.Content>
       </Card>
      </div>
