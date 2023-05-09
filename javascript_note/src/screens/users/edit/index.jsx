@@ -3,7 +3,7 @@ import { Section, Heading, Container, Card } from "react-bulma-components";
 import "../../../styles/users.scss";
 import HeaderLogged from "../../../components/header_logged";
 import UsersEditForm from "../../../components/users/user_edit_form";
-
+import UsersEditPasswordForm from "../../../components/users/user_edit_password_form"
 
 const UserEditScreen = () => (
  <Fragment>
@@ -30,7 +30,7 @@ const UserEditScreen = () => (
       </Heading>
       <Card>
        <Card.Content>
-        Users Edit Password Form...
+          <UsersEditPasswordForm/>
        </Card.Content>
       </Card>
      </div>

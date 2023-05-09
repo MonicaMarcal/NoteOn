@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from 'react';
-import { Button,Help } from "react-bulma-components";
+import { Button} from "react-bulma-components";
 import UserService from '../../../services/users';
 
 function UsersEditForm() {
@@ -67,10 +67,10 @@ function UsersEditForm() {
      </div>
     </div>
     {status == "error" &&
-     <Help color="danger">Problem in update</Help>
+      <p className="help is-danger">Problem in update</p>
     }
     {status == "success" &&
-     <Help color="primary">Updated with success</Help>
+     <p className="help is-success">Updated with success</p>
     }
    </form>
   </Fragment>
