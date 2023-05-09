@@ -4,6 +4,7 @@ import "../../../styles/users.scss";
 import HeaderLogged from "../../../components/header_logged";
 import UsersEditForm from "../../../components/users/user_edit_form";
 import UsersEditPasswordForm from "../../../components/users/user_edit_password_form"
+import UsersDelete from "../../../components/users/user_delete";
 
 const UserEditScreen = () => (
  <Fragment>
@@ -37,7 +38,7 @@ const UserEditScreen = () => (
     </div>
     <div className="centered">
      <div size={4} className="has-text-right">
-      Users Delete Button...
+        <UsersDelete/>
      </div>
     </div>
    </Container>

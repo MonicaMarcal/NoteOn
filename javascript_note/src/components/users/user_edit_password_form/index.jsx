@@ -20,7 +20,6 @@ function UsersEditFormPassword() {
    } else{
    setStatus("error_confirmation_password")
    }
-
   }
 
  return (
