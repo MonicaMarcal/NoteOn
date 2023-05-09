@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 const jwt = require('jsonwebtoken');
+const withAuth = require('../middlewares/auth');
 
 require('dotenv').config()
 const secret = process.env.JWT_TOKEN;
