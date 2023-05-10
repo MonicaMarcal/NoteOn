@@ -66,7 +66,7 @@ router.put('/', withAuth, async function(req, res) {
     var user = await User.findOne({_id: req.user._id})
      user.password = password
      user.save()
-       res.json(user);
+     res.json(user);
    } catch (error) {
      res.status(401).json({error: error});
    }
@@ -75,8 +75,8 @@ router.put('/', withAuth, async function(req, res) {
  router.delete('/', withAuth, async function(req, res) {
   try {
    let user = await User.findOne({_id: req.user._id });
-   await user.deleteOne();
-      res.json({message: 'OK'}).status(201);
+     await user.deleteOne();
+     res.json({message: 'OK'}).status(201);
    } catch (error) {
       res.status(500).json({error: error});
    }
