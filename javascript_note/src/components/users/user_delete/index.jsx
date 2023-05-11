@@ -4,21 +4,21 @@ import UserService from '../../../services/users';
 import { Navigate } from "react-router-dom";
 
 function UsersDelete() {
- const [redirectToHome, setRedirectToHome] = useState(false);
-
- const deleteUser = async () => {
+  const [redirectToHome, setRedirectToHome] = useState(false);
+ 
+  const deleteUser = async () => {
     if (window.confirm('Are you sure you wish to delete this account?')){
       try{
-      UserService.delete()
-      setRedirectToHome(true)
-    }catch{
-      console.log("error ao deletar")
+        await UserService.delete()
+        setRedirectToHome(true)
+      }catch(err){
+          console.log("Caiu no catch")
+      }
     }
-  }
-}
+   }
 
 if(redirectToHome == true)
-return <Navigate to={{pathname: "/"}}/>
+  return <Navigate to={{pathname: "/"}}/>
 
  
  return(

@@ -11,6 +11,7 @@ import { faList } from '@fortawesome/free-solid-svg-icons'
 
 function HeaderLogged(props) {
  const [redirectToHome, setRedirectToHome] = useState(false);
+ const[user] = useState(localStorage.getItem('user'))
 
  const logOut = async () => {
     await UserService.logout();
@@ -59,7 +60,7 @@ function HeaderLogged(props) {
       <div className="navbar-item">
       <div className="navbar-item has-dropdown is-hoverable">
         <Button className="button" color="black" outlined>
-         <span>Mônica ▼</span>
+          <span>{JSON.parse(user)['name']} ▼ </span>
         </Button>
 
         <div className="navbar-dropdown">
