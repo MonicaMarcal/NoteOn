@@ -1,6 +1,6 @@
 
 import { Fragment, useState} from 'react';
-import { Button,Help} from "react-bulma-components";
+import { Button,Help, Section} from "react-bulma-components";
 import { Navigate } from "react-router-dom";
 import UserService from '../../../services/users';
 
@@ -31,13 +31,13 @@ function LoginForm() {
 
   return (
    <Fragment>
-     <div className="has-text-centered">
+   <Section size="small" className="home">
       <form onSubmit={HandleSubmit}>
-       <div size={12}>
        <div className="field">
-         <label size="small">Email:</label>
+         <label className="label">Email:</label>
          <div className="control">
           <input
+          className="input"
            type="email"
            required
            name="email"
@@ -47,9 +47,10 @@ function LoginForm() {
          </div>
         </div>
         <div className="field">
-         <label size="small">Password:</label>
+         <label className="label">Password:</label>
          <div className="control">
           <input
+          className="input"
            type="password"
            required
            name="password"
@@ -60,20 +61,19 @@ function LoginForm() {
         </div>
         <div className="field">
         <div className="control">
-          <div>
-           <div>
-            <a onClick={() => setRedirectToRegister(true)} className="button is-white has-text-custom-purple">Register or</a>
-           </div>
-           <div>
+          <div className="field is-grouped">
+            <p className="control">
+              <a onClick={() => setRedirectToRegister(true)} className="button is-white has-text-custom-purple">Register or</a>
+            </p>
+            <p className="control">
             <Button color="custom-purple" outlined>Login</Button>
-           </div>
+           </p>
           </div>
          </div>
         </div>
         { error && <Help color="danger">Email or Password invalid</Help> }
-       </div>
-      </form>
-     </div>
+       </form>
+     </Section>
    </Fragment>
    )
  }
