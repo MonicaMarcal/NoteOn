@@ -1,5 +1,4 @@
 import 'bulma/css/bulma.min.css';//node_modules
-import LogoImage from '../../assets/images/logo.png';
 import '../../styles/header.scss'
 import { Link } from 'react-router-dom'; 
 
@@ -9,7 +8,7 @@ function Header(){
         <div className="navbar-brand">
           <a className="navbar-item">
           <Link to="/">
-              <img src={LogoImage} width="112" height="28"/>
+              <h1 className='title'>NOTEON</h1>
           </Link>
           </a>
 
@@ -22,11 +21,11 @@ function Header(){
           <div className="navbar-end " id="navbar-menu">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-white has-text-custom-purple">
-                  <Link to="/register">Register</Link>
+                <a>
+                  <Link to="/register" className="button is-white has-text-black">Register</Link>
                 </a>
-                <a className="button is-outlined is-custom-purple">
-                  <Link to="/login">Login</Link>
+                <a>
+                  <Link to="/login" className="button is-outlined is-black">Login</Link>
                 </a>
               </div>
             </div>

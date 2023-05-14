@@ -1,5 +1,10 @@
 @import "./custom_colors";
 
+
+.title{
+  color: black;
+}
+
 nav.navbar {
  height: 70px;
  border-bottom: 1px solid $custom-purple;
@@ -22,4 +27,4 @@ nav.navbar {
   .navbar-menu{
    background-color: $custom-purple;
    }
- }
+ } 

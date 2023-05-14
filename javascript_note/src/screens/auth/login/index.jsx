@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Header from "../../../components/header";
 import { Section, Container, Card} from 'react-bulma-components';
-import LogoImage from '../../../assets/images/logo.png';
+//import LogoImage from '../../../assets/images/logo.png';
 import "../../../styles/auth.scss";
 import LoginForm from "../../../components/auth/login_form";
 
@@ -18,7 +18,7 @@ const LoginScreen = () => (
        <Section>
           <div className="has-text-centered">
             <div size={12}>
-            <img src={LogoImage}/>
+            {/* <img src={LogoImage}/> */}
             </div>
           </div>
 

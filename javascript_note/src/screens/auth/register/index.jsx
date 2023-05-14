@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Header from "../../../components/header";
 import { Section, Container, Card} from 'react-bulma-components';
-import LogoImage from '../../../assets/images/logo.png';
+//import LogoImage from '../../../assets/images/logo.png';
 import "../../../styles/auth.scss";
 import RegisterForm from "../../../components/auth/register_form";
 
@@ -18,7 +18,7 @@ const RegisterScreen = () => (
               <Section>
                 <div>
                   <div size={12}  className="has-text-centered">
-                       <img src={LogoImage}/>
+                       {/* <img src={LogoImage}/> */}
                   </div>
                   <div size={12}  className="has-text-centered">
                       <h2 size={6} className="has-text-grey has-text-centered">

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button} from 'react-bulma-components';
-//import LogoImage from '../../assets/images/logo-white.png';
-import LogoImage from '../../assets/images/logo.png';
+//import LogoImage from '../../assets/images/logo.png';
 import "../../styles/header.scss";
 import UserService from '../../services/users';
 import { Navigate, Link } from "react-router-dom";
@@ -26,7 +25,7 @@ function HeaderLogged(props) {
   
   <div className="navbar-brand">
     <Link to="/notes">
-       <img src={LogoImage} />
+       {/* <img src={LogoImage} /> */}
       </Link>
       
       <a
