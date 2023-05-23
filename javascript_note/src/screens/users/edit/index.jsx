@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
-import { Section, Heading, Container, Card } from "react-bulma-components";
-import "../../../styles/users.scss";
+import { Card, Container, Heading, Section } from "react-bulma-components";
 import HeaderLogged from "../../../components/header_logged";
-import UsersEditForm from "../../../components/users/user_edit_form";
-import UsersEditPasswordForm from "../../../components/users/user_edit_password_form"
 import UsersDelete from "../../../components/users/user_delete";
+import UsersEditForm from "../../../components/users/user_edit_form";
+import UsersEditPasswordForm from "../../../components/users/user_edit_password_form";
+
 
 const UserEditScreen = () => (
  <Fragment>
   <HeaderLogged />
-  <Section size="medium" className="users">
+  <Section size="medium" className="users ">
    <Container>
     <div className="users-edit centered">
      <div size={4}>

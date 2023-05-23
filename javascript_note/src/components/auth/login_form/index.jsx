@@ -1,6 +1,6 @@
 
-import { Fragment, useState} from 'react';
-import { Button,Help, Section} from "react-bulma-components";
+import { Fragment, useState } from 'react';
+import { Button, Help } from "react-bulma-components";
 import { Navigate } from "react-router-dom";
 import UserService from '../../../services/users';
 
@@ -31,7 +31,7 @@ function LoginForm() {
 
   return (
    <Fragment>
-   <Section size="small" className="home">
+  <section className="hero is-dark is-fullheight">
       <form onSubmit={HandleSubmit}>
        <div className="field">
          <label className="label">Email:</label>
@@ -73,7 +73,7 @@ function LoginForm() {
         </div>
         { error && <Help color="danger">Email or Password invalid</Help> }
        </form>
-     </Section>
+     </section>
    </Fragment>
    )
  }

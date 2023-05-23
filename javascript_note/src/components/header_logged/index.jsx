@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Button} from 'react-bulma-components';
+import { Button } from 'react-bulma-components';
 //import LogoImage from '../../assets/images/logo.png';
-import "../../styles/header.scss";
+import { faList } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link, Navigate } from "react-router-dom";
 import UserService from '../../services/users';
-import { Navigate, Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList } from '@fortawesome/free-solid-svg-icons'
+
 
 
 function HeaderLogged(props) {

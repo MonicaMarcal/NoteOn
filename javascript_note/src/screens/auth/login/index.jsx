@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
+import { Card, Container, Section } from 'react-bulma-components';
 import Header from "../../../components/header";
-import { Section, Container, Card} from 'react-bulma-components';
 //import LogoImage from '../../../assets/images/logo.png';
-import "../../../styles/auth.scss";
 import LoginForm from "../../../components/auth/login_form";
 
 const LoginScreen = () => (
