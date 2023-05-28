@@ -25,7 +25,7 @@ const HomeScreen = () => (
                  </button>  
                 </p>
             </article>
-            <img className="w-1/2" src="./src/assets/images/blue.jpg" alt="Rocket Dab"/>
+            <img className="w-1/2" src="./src/assets/images/blue.jpg" alt=""/>
         </section>
     </main>
  </Fragment>
