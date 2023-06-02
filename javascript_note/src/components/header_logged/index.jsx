@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Button } from 'react-bulma-components';
-//import LogoImage from '../../assets/images/logo.png';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { Link, Navigate } from "react-router-dom";
 import UserService from '../../services/users';
 
@@ -21,60 +21,43 @@ function HeaderLogged(props) {
     return <Navigate to={{ pathname: "/" }} />
 
  return (
-  <nav color="custom-purple" className="navbar" role="navigation" aria-label="main navigation">
-  
-  <div className="navbar-brand">
-    <Link to="/notes">
-       {/* <img src={LogoImage} /> */}
-      </Link>
-      
-      <a
-         className="navbar-burger burger"
-         aria-label="menu"
-         aria-expanded="false"
-         data-target="navbar-menu">
-         <span aria-hidden="true"></span>
-         <span aria-hidden="true"></span>
-         <span aria-hidden="true"></span>
-     </a>
+  <div className="bg-indigo-600 text-white sticky top-0 z-10">
+     <nav className="max-w-4xl mx-auto p-4 flex justify-between items-center">
+       <Link to="/notes">
+         <h1 className="text-3xl font-medium">
+           📄 NoteOn
+         </h1>
+       </Link>
 
-  </div>
+        <div className="navbar-end">
+          <div className="navbar-item has-dropdown is-hoverable">
+            <button className="text-gray-800">
+              <span>{JSON.parse(user)['name']} ▼ </span>
+            </button>
 
-      <div className="navbar-end">
+            <div className="navbar-dropdown">
+            
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md">
+            <a onClick={() => props.setIsOpen(true)} className="navbar-item">
+              <FontAwesomeIcon icon={faList} /> Notes
+            </a>
+            </button>
 
-     {/*botão sidebar*/}
-      <nav className="navbar-item navbar-start">
-        <a className="navbar-item">
-          <Button
-          className="open-button"
-          color="black"
-          outlined
-          // eslint-disable-next-line react/prop-types
-          onClick={() => props.setIsOpen(true)}>
-            <FontAwesomeIcon icon={faList} />
-          </Button>
-        </a>
-      </nav>
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 m-1 rounded-md">
+                  <a className="navbar-item">
+                      <Link to="/users/edit">User Edit</Link>
+                  </a>
+              </button>
 
-      <div className="navbar-item">
-      <div className="navbar-item has-dropdown is-hoverable">
-        <Button className="button" color="black" outlined>
-          <span>{JSON.parse(user)['name']} ▼ </span>
-        </Button>
-
-        <div className="navbar-dropdown">
-        <a className="navbar-item">
-        <Link to="/users/edit">User Edit</Link>
-          </a>
-          <a className="navbar-item">
-            <a href="#" onClick={() => logOut()}>LogOut</a>
-          </a>
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md">
+                  <a href="#" onClick={() => logOut()}>LogOut</a>
+              </button>
+              
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
-  </div>
-</nav>
-
 );
 
 }

@@ -1,6 +1,5 @@
 
 import { Fragment, useState } from 'react';
-import { Help } from "react-bulma-components";
 import { Navigate } from "react-router-dom";
 import UserService from '../../../services/users';
 
@@ -74,7 +73,11 @@ function LoginForm() {
               <a onClick={() => setRedirectToRegister(true)}> Register</a>
             </p>
           </div>
-        { error && <Help color="danger">Email or Password invalid</Help> }
+        { error && 
+          <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+          <span className="font-medium">Email or Password invalid</span>
+          </div>
+       }
       </form>
     </div>
   </div>
