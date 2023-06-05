@@ -11,9 +11,9 @@ const HomeScreen = () => (
             <article className="sm:w-1/2">
                 <h2
                     className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
-                    Welcome to <span className="text-indigo-600 dark:text-indigo-300"> NoteOn</span>
+                    Welcome to <span className="text-indigo-600"> NoteOn</span>
                 </h2>
-                <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+                <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 ">
                    Create notes easily and access when you wants on the cloud!
                 </p>
                 <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">

@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Button } from "react-bulma-components";
-import UserService from '../../../services/users';
 import { Navigate } from "react-router-dom";
+import UserService from '../../../services/users';
 
 function UsersDelete() {
   const [redirectToHome, setRedirectToHome] = useState(false);
@@ -22,9 +21,13 @@ if(redirectToHome == true)
 
  
  return(
-  <Button color="danger" onClick={() => deleteUser()}>
-    Excluir conta
-  </Button>
+  <div className="flex justify-center mt-4">
+  <button className="control px-12 py-2 text-lg font-medium text-center text-white bg-red-600 rounded-md"
+      onClick={() => deleteUser()}>
+      Excluir conta
+    </button>
+  </div>
+ 
   )
 }
 

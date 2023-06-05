@@ -70,12 +70,12 @@ function LoginForm() {
               </button>
             <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
               Do not have an account?
-              <a onClick={() => setRedirectToRegister(true)}> Register</a>
+              <a onClick={() => setRedirectToRegister(true)} className="text-blue-800"> Register</a>
             </p>
           </div>
         { error && 
-          <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-          <span className="font-medium">Email or Password invalid</span>
+          <div className="py-4 mb-4 text-sm font-medium rounded-lg dark:text-red-600" role="alert">
+          <span>Email or Password invalid</span>
           </div>
        }
       </form>
