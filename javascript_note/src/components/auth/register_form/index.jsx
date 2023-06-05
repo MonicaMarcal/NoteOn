@@ -1,5 +1,4 @@
 import { Fragment, useState } from "react";
-import { Button,Section, Help} from "react-bulma-components";
 import { Navigate } from "react-router-dom";
 import UserService from '../../../services/users';
 
@@ -28,14 +27,18 @@ function RegisterForm() {
 
   return (
     <Fragment>
-     <Section size="small" className="home">
-        <form onSubmit={HandleSubmit}>
-          <div size={12}>
-            <div className="field">
-              <label className="label">Name</label>
-              <div className="control">
+   <div className="bg-gray-100 flex items-center justify-center h-screen">
+   <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex items-center">
+   <div className="w-1/3">
+      <img src="./src/assets/images/blue.jpg" alt="Logo" className="w-full"/>
+    </div>
+    <div className="w-2/3 pl-8">
+      <h1 className="text-2xl font-bold mb-6">Register</h1>
+    <form  onSubmit={HandleSubmit}>
+        <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Name</label>
                 <input
-                  className="input"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Name"
                   type="name"
                   required
@@ -44,13 +47,12 @@ function RegisterForm() {
                   onChange={e => setName(e.target.value)}
                 />
               </div>
-            </div>
-
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
+         
+            
+            <div className="mb-6">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
                 <input
-                  className="input"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="email"
                   placeholder="Email"
                   required
@@ -59,12 +61,12 @@ function RegisterForm() {
                   onChange={e => setEmail(e.target.value)}
                 />
               </div>
-            </div>
+         
 
-            <div className="field">
-              <label className="label">Password</label>
+            <div className="mb-6">
+              <label  className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">Password</label>
               <input
-                className="input"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
                 placeholder="Password"
                 required
@@ -72,31 +74,28 @@ function RegisterForm() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
               />
-              <span className="icon is-small is-left">
-                <i className="fas fa-lock"></i>
-              </span>
             </div>
 
-            <div className="field">
-              <div className="control">
-                <div className="field is-grouped">
+            <div className="text-center lg:text-left">            
                   <p className="control">
-                    <a onClick={() => setRedirectToLogin(true)} className="button is-white has-text-custom-purple">
-                      Login or
-                    </a>
-                  </p>
-                  <p className="control">
-                    <Button color="custom-purple" outlined>
+                  <button className="control px-12 py-2 text-lg font-medium text-center text-white bg-indigo-600 rounded-md">
                       Register
-                    </Button>
+                    </button>
                   </p>
+                  <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
+                    Do have an account?
+                    <a onClick={() => setRedirectToLogin(true)} className="text-blue-800"> Login </a>
+                 </p>
                 </div>
+            { error &&
+              <div className="py-4 mb-4 text-sm font-medium rounded-lg dark:text-red-600" role="alert">
+                <span>Email or Password invalid</span>
               </div>
-            </div>
-            { error && <Help color="danger">Email or Password invalid</Help> }
-          </div>
+             }
         </form>
-      </Section>
+        </div>
+        </div>
+        </div>
     </Fragment>
   );
 }

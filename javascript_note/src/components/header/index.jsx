@@ -1,43 +1,33 @@
-import 'bulma/css/bulma.min.css';//node_modules
-import { Navbar, Container } from 'react-bulma-components';
-import LogoImage from '../../assets/images/logo.png';
-import '../../styles/header.scss'
-import { Link } from 'react-router-dom'; 
+import { Link } from "react-router-dom";
 
-function Header(){
-  return(
-    <Navbar>
-    <Container>
-      <Navbar.Brand>
-          <Link to="/">
-              <img src={LogoImage} />
-          </Link>
-      <Navbar.Burger
-        className="navbar-burger burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbar-menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </Navbar.Burger>
-      </Navbar.Brand>
-  
-     <Navbar.Menu id="navbar-menu">
-     <div className="navbar-item navbar-end">
+
+function Header() {
+  return (
+          <header className="bg-indigo-600 text-white sticky top-0 z-10">
+            <section className="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <Link to="/">
+             <h1 className="text-3xl font-medium">
+                📄 NoteOn
+              </h1>
+              </Link>   
             <div>
-              <div className="button is-white has-text-custom-purple">
-                <Link to="/register">Register</Link>
-              </div>
-              <div className="button is-outlined is-custom-purple">
-                <Link to="/login">Login</Link>
-              </div>
+                <button id="mobile-open-button" className="text-3xl sm:hidden focus:outline-none">
+                    &#9776;
+                </button>
+                <nav className="hidden sm:block space-x-8 text-xl" aria-label="main">
+                    <Link to="/register">
+                    <a className="hover:opacity-90">Register</a>
+                    </Link>
+                    <a className="hover:opacity-90">
+                      <Link to="/login">
+                        Login
+                      </Link>
+                    </a>
+                </nav>
             </div>
-     </div>
-     </Navbar.Menu>
-    </Container>
-    </Navbar>
-   )
- }
- 
- export default Header;
+        </section>    
+    </header>
+  );
+}
+
+export default Header;

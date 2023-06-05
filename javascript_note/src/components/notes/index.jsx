@@ -1,9 +1,8 @@
-import {Fragment, useEffect, useState } from 'react';
-import '../../styles/notes.scss'
-import { push as Menu } from 'react-burger-menu'
-import List from "../notes/list";
+import { Fragment, useEffect, useState } from 'react';
+import { push as Menu } from 'react-burger-menu';
 import NoteService from '../../services/note';
 import Editor from "../notes/editor";
+import List from "../notes/list";
 import Search from '../notes/search';
 
 function Notes(props) {

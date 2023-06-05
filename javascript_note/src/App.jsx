@@ -1,5 +1,4 @@
-import {Fragment } from 'react';
-import "./App.scss";
+import { Fragment } from 'react';
 import RoutesUrl from './routes';
 
 

@@ -1,41 +1,43 @@
 /* eslint-disable react/prop-types */
-import { Fragment } from 'react';
-import { Tag, Heading, Button } from "react-bulma-components";
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Moment from 'moment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { Fragment } from 'react';
+import { Tag } from "react-bulma-components";
 
 
 function ListNotes(props) {
  return (
   <Fragment>
-   <div className=" column is-mobile">
-    <div className="column is-three-fifths" offset={1}>
-     <Heading className='title is-6'>
-       {props.notes.length} Notes
-     </Heading>
+    <div className="px-4 py-4	">
+      <div className="grid grid-flow-col gap-x-2" offset={1}>
+      <h1 className='px-5 py-2.5'>
+        {props.notes.length} Notes
+      </h1>
 
-      <div>
-        <Button state="active" color="custom-purple" outlined size="small" onClick={() => props.createNote()}>
-          Notes +
-        </Button>
+        <div>
+          <button className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
+          onClick={() => props.createNote()}>
+            Notes +
+          </button>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
+    <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-400"/>
 
-   <ul className="notes-list">
+   <ul className="px-4 py-4">
      {props.notes.map((item, key) =>
      // eslint-disable-next-line react/no-unknown-property
-     <li className='column is-two-thirds ' key={key} onClick={() => props.selectNote(item._id)} active={item == props.current_note}>
-      <Heading className='title is-6'>
+     <li className="" key={key} onClick={() => props.selectNote(item._id)} active={item == props.current_note}>
+      <h1 className="text-base md:text-black-600 font-semibold">
         {item.title.replace(/(<([^>]+)>)/ig, "").substring(0,15)}
-      </Heading>
-      <Heading className='title is-6' subtitle spaced={false}>
+      </h1>
+      <h1 className='text-gray-600'>
         {item.body.replace(/(<([^>]+)>)/ig, "").substring(0,30)}
-      </Heading>
+      </h1>
 
-      <div className="columns is-mobile">
-       <div className="column is-three-quarters">
+      <div className="grid grid-flow-col gap-x-2 pt-4">
+       <div className="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 dark:bg-gray-400 text-black rounded-full">
         <Tag color="dark">
           {Moment(item.created_at).format('DD/MM')}
         </Tag>
@@ -50,6 +52,8 @@ function ListNotes(props) {
         </div>
         
       </div>
+
+      <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-400"/>
      </li>
     )}
    </ul>
