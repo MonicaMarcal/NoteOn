@@ -8,6 +8,7 @@
 ![](./.github/noteon.png)
 <br>
 
+
 <h3>
 Tenha suas anotações importantes à mão, faça seu registro na plataforma, adicione suas ideias, tarefas com mais facilidade, aumente sua produtividade no dia-a-dia :D 
 </h3>
@@ -18,6 +19,9 @@ Tenha suas anotações importantes à mão, faça seu registro na plataforma, ad
 - Refatorar estilo e responsividade das páginas
 - Deploy backend e frontend
 
+<br>
+
+### 🔵 Documentação dos endpoints - Postman: [clique aqui](https://documenter.getpostman.com/view/14145764/2s93sc6D8v)
 <br>
 
 ### 🔵 Sobre o projeto:
