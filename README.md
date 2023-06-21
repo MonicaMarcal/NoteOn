@@ -65,6 +65,33 @@ Tenha suas anotações importantes à mão, faça seu registro na plataforma, ad
 
 <br>
 
+### 🔵 Como rodar:
+
+1. Clonar o projeto: 
+```
+git clone https://github.com/MonicaMarcal/NoteOn.git
+```
+4. Em javascript_note_api no arquivo (.env ):
+```
+JWT_TOKEN=coloque_uma_senha
+```
+
+3. Na pasta javascript_note: 
+```
+npm install
+npm run dev
+
+```
+4. Na pasta javascript_note_api: 
+```
+npm install
+PORT=3001 npm start
+```
+
+
+
+<br>
+
 ### 🔵 Atribuições de imagens:
 - <a href="https://br.freepik.com/vetores-gratis/ilustracao-do-conceito-de-documento-online_13338131.htm#from_view=detail_author">Imagem de storyset</a> no Freepik
 
