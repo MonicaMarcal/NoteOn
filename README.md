@@ -1,16 +1,11 @@
 <h1 align="center"> 📄 NoteOn</h1>
 <br>
 
-<a href="" target="_blank">
-<h2  align="center" >Veja a aplicação no ar 🚀 </h2>
-</a>
 
-![](./.github/noteon.png)
+[NoteOn.webm](https://github.com/MonicaMarcal/NoteOn/assets/63027699/6dd1c1e9-1d8a-4f4b-84e4-84d3f8f59b32)
 
 <br>
-<!-- <video src='video1.mov' width=180/> | <video src='video2.mp4' width=180/> -->
 
-<iframe src="https://drive.google.com/file/d/1bExAtbJurXsJXCl6qRar5AvRDlcKbaqU/preview" width="640" height="300"></iframe>
 
 <h3>
 Tenha suas anotações importantes à mão, faça seu registro na plataforma, adicione suas ideias, tarefas com mais facilidade, aumente sua produtividade no dia-a-dia :D 
@@ -20,7 +15,6 @@ Tenha suas anotações importantes à mão, faça seu registro na plataforma, ad
 
 ### ⚠️ Status do Projeto [■■■■■■■■□□] 80% 
 - Refatorar estilo e responsividade das páginas
-- Deploy backend e frontend
 
 <br>
 
