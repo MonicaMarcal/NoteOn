@@ -68,7 +68,7 @@ Tenha suas anotações importantes à mão, faça seu registro na plataforma, ad
 ```
 git clone https://github.com/MonicaMarcal/NoteOn.git
 ```
-4. Em javascript_note_api no arquivo (.env ):
+4. Em javascript_note_api crie um arquivo chamado: (.env ):
 ```
 JWT_TOKEN=coloque_uma_senha
 ```

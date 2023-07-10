@@ -1,14 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
+import LoginScreen from './screens/auth/login';
+import RegisterScreen from './screens/auth/register';
 import HomeScreen from './screens/home';
-import RegisterScreen from './screens/auth/register'
-import LoginScreen from './screens/auth/login'
-import NotesIndexScreen from './screens/notes/index'
-import UserEditScreen from './screens/users/edit'
+import NotesIndexScreen from './screens/notes/index';
+import UserEditScreen from './screens/users/edit';
 
 import PrivateRoute from './components/private_route';
-
-
 
 const RoutesUrl = () => {
   return (

@@ -8,7 +8,7 @@ const secret = process.env.JWT_TOKEN;
 
 const User = require('../models/user.js');
 
-//registrando um usuario
+
 router.post('/register', async function(req, res) {
   const { name, email, password } = req.body;
   const user = new User({ name, email, password });
